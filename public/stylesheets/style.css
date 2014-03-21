@@ -1,0 +1,19 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.logo {
+  width: 236px;
+  height: 187px;
+  background-image: url(../images/20100112100128!Np88_support.jpg);
+  margin: 75px auto 50px auto;
+}
+
+.message-form {
+  text-align: center;
+}
