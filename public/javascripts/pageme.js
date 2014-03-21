@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     document.addEventListener('DOMContentLoaded', function(){
-        var socket = io.connect('http://localhost');
+        var socket = io.connect(window.location.hostname);
 
         //when we receive a message
         socket.on('message:new', function (data) {
