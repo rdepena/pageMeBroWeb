@@ -25,7 +25,7 @@ app.get('/', function(req, res){
 });
 
 app.post('/page', function (req, res) {
-    socket.io.sockets.emit('message:new', { message: req.body.message});
+    socket.io.sockets.emit('message:new', { message: req.body});
     res.end('sent');
 });
 
