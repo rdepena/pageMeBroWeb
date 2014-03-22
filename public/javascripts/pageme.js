@@ -11,12 +11,15 @@
         //add buton click.
         document.querySelector('#send-button').addEventListener('click', function () {
 
-        var message = document.querySelector('#message-input').value;
-        var request = new XMLHttpRequest();
+            var messageObj = {
+                Body : document.querySelector('#message-input').value,
+                From : 'web client',
+            };
+            var request = new XMLHttpRequest();
 
-        request.open('POST', '/page', true);
-        request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-        request.send(JSON.stringify({message:message}));
+            request.open('POST', '/page', true);
+            request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+            request.send(JSON.stringify(messageObj));
 
         });
     });
