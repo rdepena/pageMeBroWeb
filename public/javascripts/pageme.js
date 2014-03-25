@@ -11,17 +11,22 @@
         //add buton click.
         document.querySelector('#send-button').addEventListener('click', function () {
 
+            //our text
+            var textField = document.querySelector('#message-input');
+
             //message object to be sent to the /page endpoint.
             var messageObj = {
-                Body : document.querySelector('#message-input').value,
+                Body : textField.value,
                 From : 'web client',
             };
-            
+
             var request = new XMLHttpRequest();
             request.open('POST', '/page', true);
             request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
             request.send(JSON.stringify(messageObj));
 
+            //reset the page.
+            textField.value = "";
         });
     });
 }());
